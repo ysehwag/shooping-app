@@ -1,9 +1,11 @@
 const route=require('express').Router()
 const Products=require('../db').Product
-
+const Vendors=require('../db').Vendor
 
 route.get('/', (req, res) => {
-  Products.findAll()
+  Products.findAll({
+    include : Vendors
+  })
     .then((products) => {
       res.status(201).send(products)
     })

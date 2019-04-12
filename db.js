@@ -64,4 +64,4 @@ db.sync()
 .catch((error)=>{
   console.log(error)
 })
-exports=module.exports={db,Vendor,Product,Cart}
+exports=module.exports={db,Vendor,Product,Cart,User}
