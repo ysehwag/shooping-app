@@ -7,7 +7,7 @@ function addCart(product){
         console.log(user +" "+product)
         $.get('/users/'+user,
         (user)=>{
-            $.post('/cart',{
+            $.post('/carts',{
                 userId:user.id,
                 productId:product,
                 quantity:1

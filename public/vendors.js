@@ -18,12 +18,19 @@ function formTable(){
         vendorList.empty()
         
         for(vendor of vendors){
+            // vendorList.append(
+            // `<li>
+            //     ${vendor.id} ${vendor.name}  
+            //     <button type="button" id="${vendor.id}" onclick="deleteVendor(${vendor.id})" class="btn btn-primary">Delete</button >
+            // </li>` 
+            // )
             vendorList.append(
-            `<li>
-                ${vendor.id} ${vendor.name}  
-                <button type="button" id="${vendor.id}" onclick="deleteVendor(${vendor.id})" class="btn btn-primary">Delete</button >
-            </li>` 
-            )
+                `<tr>
+                <th scope="row">${vendor.id} </th>
+                <td>${vendor.name}</td>
+                <td> <button type="button" id="${vendor.id}" onclick="deleteVendor(${vendor.id})" class="btn btn-primary">Delete</button ></td>
+                </tr>` 
+                )
         }
     })
 }

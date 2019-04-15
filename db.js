@@ -48,13 +48,14 @@ const db = new Sequelize({
         allowNull: false
       }
   })
+
   Vendor.hasMany(Product, {onDelete:'cascade'})
-  
   Product.belongsTo(Vendor)
 
   Product.hasMany(Cart,{onDelete:'cascade'})
-Cart.belongsTo(Product)
-  User.hasMany(Cart)
+  Cart.belongsTo(Product)
+
+  User.hasMany(Cart,{onDelete:'cascade'})
   Cart.belongsTo(User)
 
 db.sync()

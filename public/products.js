@@ -47,12 +47,22 @@ function formTable(){
         
         for(product of products){
             console.log("retuned item"+product.id)
+            // productList.append(
+            // `<li>
+            //     ${product.id} ${product.pname}  ${product.price}  ${product.qty} 
+            //     <button type="button" id="${product.id}" onclick="deleteProduct(${product.id})" class="btn btn-primary">Delete</button >
+            // </li>` 
+            // )
             productList.append(
-            `<li>
-                ${product.id} ${product.pname}  ${product.price}  ${product.qty} 
-                <button type="button" id="${product.id}" onclick="deleteProduct(${product.id})" class="btn btn-primary">Delete</button >
-            </li>` 
-            )
+                `   <tr>
+                        <th scope="row">${product.id}</th>
+                        <td>${product.pname}</td>
+                        <td>${product.price}</td>
+                        <td>${product.qty}</td>
+                        <td><button type="button" id="${product.id}" onclick="deleteProduct(${product.id})" class="btn btn-primary">Delete</button ></td>
+
+                    </tr>` 
+                )
         }
     })
 }

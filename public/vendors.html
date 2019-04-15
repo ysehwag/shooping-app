@@ -15,7 +15,7 @@
       <title>Document</title>
     </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -30,22 +30,61 @@
             <li class="nav-item">
                 <a class="nav-link" href="products.html">Products</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" href="carts.html">Carts</a>
+              </li>
           </ul>
         
          </div>
         
-      </nav>
-  <form class="container offset-lg-2">
-      <div class="form-group" style="display:flex;">
-          <label style="margin-right:6px;">Vendor Name:</label>
-          <input class="form-control col-lg-3" id="vname"  placeholder="Enter vendorname" >
-            </div>
+      </nav> -->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark my-2">
+        <a class="navbar-brand" href="index.html">Home</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
     
-  </form>
-  <button type="submit" id="addvendor" class="btn btn-primary" style="margin-left:8px;">Add vendor</button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="products.html">Products<span
+                            class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="vendors.html">Vendors</a>
+                </li>
+    
+                <li class="nav-item">
+                    <a class="nav-link" href="carts.html">Cart</a>
+                </li>
+            </ul>
+           
+        </div>
+    </nav>
+  
       
+  <div class="card-header m-2 p-4 row">
+      <div class="col-lg-8" style="float:right;"> 
+          <form class=" container offset-lg-2">
+              <div class="form-group row" style="display:flex;">
+                  <div class="col-lg-3">
+                      <label style="margin-right:6px;">Vendor Name:</label>
+                  </div>
+                  <div class="col-lg-9">
+                      <input class="form-control col-lg-3" id="vname"  placeholder="Enter vendorname" >
+                  </div>
+              </div> 
+            </form>      
+      </div>
+      <div class="col-lg-4 " style="float: left;">
+          <button type="submit" id="addvendor" class="btn btn-primary" >Add vendor</button>
+      </div>
+</div>
+
+
   <div class="container"><br>
-    <table class="table table-hover " style="margin-top: 5%">
+    <!-- <table class="table table-hover " style="margin-top: 5%">
     <thead>
       <tr>
       <th scope="col">Id</th>
@@ -57,7 +96,19 @@
     
       </ul>
     </tbody>
-    </table> 
+    </table>  -->
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody id="vendor-List">
+          
+        </tbody>
+      </table>
     </div>
 </body>
 </html>
